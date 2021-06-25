@@ -5,10 +5,18 @@
   padding: 10%;
   margin: 5%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .reduced {
   width: 80%;
 }
 .categories-single-item img {
   width: 100%;
+}
+@media only screen and (max-width: 525px) {
+  .categories-single-item {
+    min-height: 85vh;
+  }
 }
