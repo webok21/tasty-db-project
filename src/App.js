@@ -16,20 +16,29 @@ import SingleCategory from "./components/SingleCategory";
 
 function App() {
   return (
-    
-      <Router>
-        <Container>
-          
-          <Switch>
-          <Header />
-          </Switch>
 
+    <Router>
+      <Container>
+
+
+
+        <Header />
+
+
+
+
+
+
+        <Search />
+
+        <Switch>
           <Route path="/" exact component={Categories} />
           <Route path="/meals/:Id" component={SingleCategory} />
-          
-        </Container>  
-      </Router>
-  
+        </Switch>
+        <Footer />
+      </Container>
+    </Router>
+
   );
 }
 
