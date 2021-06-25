@@ -23,10 +23,16 @@ function App() {
           <Switch>
           <Header />
           </Switch>
+          <Switch>
+          <Search />
+          </Switch>
 
           <Route path="/" exact component={Categories} />
           <Route path="/meals/:Id" component={SingleCategory} />
-          
+          <Switch>
+          <Footer/>
+          </Switch>
+
         </Container>  
       </Router>
   
