@@ -1,0 +1,5 @@
+.Categories div:first-of-type {
+    font-size: 2.4em;
+    font-weight: var(--fw900);
+    color: var(--orange);
+}
