@@ -1,5 +1,6 @@
-
 import '../css/SingleCategory.css'
+import '../css/Loader.css'
+
 
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
@@ -24,7 +25,6 @@ class SingleCategory extends Component {
 
     render() {
         return (
-<<<<<<< HEAD
             <Row lg="1" className="Categories">
                 <div className="categories-name">
                     Everything {this.props.match.params.Id}
@@ -35,34 +35,12 @@ class SingleCategory extends Component {
                             data={Key}
                             key={Key.idMeal}
                         />)
-=======
-            
-            <Row className="Categories">
-                
-                    this.state.isLoaded ?
-                        <div className="categories-name">
-                            Everything {this.props.match.params.Id}
-                            
-                            {this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
-                                data={Key}
-                                key={Key.idMeal}
-                            />)}
-                            
-                        </div>
->>>>>>> e785884c283a32f515d54e6e5f0cd91a26a8de7f
                         :
                         <div>
-                            Loading...
+                            <div className="vs"><div class="lds-grid">Loading...<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
-<<<<<<< HEAD
                 }
             </Row>
-=======
-                        
-                
-                </Row>
-
->>>>>>> e785884c283a32f515d54e6e5f0cd91a26a8de7f
         );
     }
 }
