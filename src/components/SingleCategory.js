@@ -24,22 +24,26 @@ class SingleCategory extends Component {
 
     render() {
         return (
-            <Row lg="1" className="Categories">
-                {
+            
+            <Row className="Categories">
+                
                     this.state.isLoaded ?
                         <div className="categories-name">
                             Everything {this.props.match.params.Id}
+                            
                             {this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
                                 data={Key}
                                 key={Key.idMeal}
                             />)}
+                            
                         </div>
                         :
                         <div>
                             Loading...
                         </div>
-                }
-            </Row>
+                        
+                
+                </Row>
 
         );
     }
