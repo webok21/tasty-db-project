@@ -1,10 +1,14 @@
 .categories-single-item {
-    font-size: 1.8em;
-    font-weight: var(--fw900);
-    color: var(--white);
-    padding: 10%;
-    margin: 5%;
+  font-size: 1.8em;
+  font-weight: var(--fw900) !important;
+  color: var(--white);
+  padding: 10%;
+  margin: 5%;
+  min-height: 100vh;
+}
+.reduced {
+  width: 80%;
 }
 .categories-single-item img {
-    width: 100%;
+  width: 100%;
 }
