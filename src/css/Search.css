@@ -4,27 +4,24 @@
   align-items: center;
   margin-bottom: 5%;
 }
-
 .searchInput {
   background: var(--input-bg);
   width: 40%;
   height: 60px;
   padding-left: 20px;
-  /* padding: 10px 8%; */
   border: none;
 }
 .searchInput::placeholder {
   color: var(--pink);
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 .search button {
   background: var(--pink);
+  color: var(--white);
   width: 20%;
   height: 60px;
-  /* padding: 8px; */
   margin: 20px;
   border: none;
-  color: var(--white);
 }
 
 @media only screen and (max-width: 761px) {

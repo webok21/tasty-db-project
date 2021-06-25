@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CategoriesItem from './C';
-import { Row, Col} from 'reactstrap';
-import './../css/Categories.css'
+import { Row, Col } from 'reactstrap';
 
 class Categories extends Component {
 
@@ -45,12 +44,12 @@ class Categories extends Component {
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
                     data={Key}
                     key={Key.idCategory}
-                  
-                    
+
+
                 />)}
-                 <Col xs="12" md="6" lg="4">
+                <Col xs="12" md="6" lg="4">
                     <div className="categoriesItem div-radius">
-                    <h3>Random</h3>
+                        <h3>Random</h3>
                     </div>
                 </Col>
             </Row>
