@@ -3,6 +3,7 @@ import '../css/SingleCategory.css'
 
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
+import { Row } from 'reactstrap';
 
 
     class SingleCategory extends Component {
@@ -23,7 +24,7 @@ import SingleCategoryItem from '../components/SingleCategoryItem';
  
         render() {
             return (
-                <div className="Categories">
+                <Row lg="1" className="Categories">
                     { 
                     this.state.isLoaded ?
                         <div> 
@@ -38,7 +39,7 @@ import SingleCategoryItem from '../components/SingleCategoryItem';
                         Loading...
                          </div>
                        }
-                </div> 
+                </Row> 
                
              );
         }
