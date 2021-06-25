@@ -1,0 +1,13 @@
+.categoriesItem {
+  background-color: var(--orange);
+  text-align: center;
+  padding: 15% 0;
+  margin: 5% 0;
+}
+.categoriesItem:nth-of-type(2) {
+  background-color: var(--pink) !important;
+}
+
+.categoriesItem > img {
+  width: 75%;
+}

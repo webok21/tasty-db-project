@@ -1,0 +1,1 @@
+import './RecipeContentIngredients.css'
