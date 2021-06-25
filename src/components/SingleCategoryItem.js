@@ -8,7 +8,7 @@ const SingleCategoryItem = (props) => {
         <Col xs="12" md="6" lg="6">
             <div className="categories-single-item div-radius" style={{ backgroundColor: (props.data.idMeal % 2 === 0) ? 'var(--orange)' : 'var(--pink)' }}>
 
-                <h2>{props.data.strMeal}</h2>
+                <h3 className="itemsDescription reduced">{props.data.strMeal}</h3>
                 <img src={props.data.strMealThumb} alt="name"></img>
             </div>
         </Col>
