@@ -1,5 +1,6 @@
-
 import '../css/SingleCategory.css'
+import '../css/Loader.css'
+
 
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
@@ -36,7 +37,7 @@ class SingleCategory extends Component {
                         />)
                         :
                         <div>
-                            Loading...
+                            <div className="vs"><div class="lds-grid">Loading...<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
                 }
             </Row>
