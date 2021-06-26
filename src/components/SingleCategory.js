@@ -5,6 +5,8 @@ import '../css/Loader.css'
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
 import { Row } from 'reactstrap';
+import YouTubeModal from "./YouTubeModal"
+
 
 
 class SingleCategory extends Component {
@@ -22,7 +24,6 @@ class SingleCategory extends Component {
         console.log(this.state.data);
         console.log(JSON.stringify(this.state.data));
     }
-
     render() {
         return (
             <Row lg="1" className="Categories">
@@ -37,10 +38,10 @@ class SingleCategory extends Component {
                         />)
                         :
                         <div>
-                            <div className="vs"><div class="lds-grid">Loading...<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                            <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
                 }
-            </Row>
+                </Row>
         );
     }
 }

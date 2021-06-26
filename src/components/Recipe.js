@@ -4,12 +4,14 @@ import '../css/Loader.css'
 
 import React, { Component } from 'react';
 import { Row } from 'reactstrap';
+import YouTubeModal from "./YouTubeModal"
 
 
 class Recipe extends Component {
     state = {
         data: [],
-        isLoaded: false
+        isLoaded: false,
+        linkYoutube: []
     }
     componentDidMount() {
         let id = this.props.match.params.Id
@@ -17,7 +19,7 @@ class Recipe extends Component {
         fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then((result) => result.json())
             .then((result) => result)
-            .then((result) => this.setState({ data: result, isLoaded: true }))
+            .then((result) => this.setState({ data: result, isLoaded: true,linkYoutube:result.meals[0].strYoutube}))
         
     }
     render() {
@@ -51,11 +53,11 @@ class Recipe extends Component {
                     <p>{this.state.data.meals[0].strIngredient18}</p>
                     <p>{this.state.data.meals[0].strIngredient19}</p>
                     <p>{this.state.data.meals[0].strIngredient20}</p>    
-                   <div className="btn"><a href={this.state.data.meals[0].strYoutube}>WATCH ON YOUTUBE</a></div>
+                   <YouTubeModal buttonLabel="Watch on YouTube"  linkYoutube={this.state.linkYoutube}></YouTubeModal>
                     </div>
                         :
                         <div>
-                            <div className="vs"><div class="lds-grid">Loading...<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                            <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
                 }
             </Row>
