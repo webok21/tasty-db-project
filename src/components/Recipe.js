@@ -19,42 +19,56 @@ class Recipe extends Component {
         fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then((result) => result.json())
             .then((result) => result)
-            .then((result) => this.setState({ data: result, isLoaded: true,linkYoutube:result.meals[0].strYoutube}))
-        
+            .then((result) => this.setState({ data: result, isLoaded: true, linkYoutube: result.meals[0].strYoutube }))
+
     }
     render() {
         return (
-            <Row lg="1" className="Categories">
-               {console.log(this.state.data.meals)}
+            <Row lg="1" className="recipe-container div-radius">
+                {console.log(this.state.data.meals)}
                 {
-                    this.state.isLoaded ? 
-                    <div className="categoriesItem">
-                    <img src={this.state.data.meals[0].strMealThumb} alt="name"></img><br/>
-                    <h1>{this.state.data.meals[0].strMeal}</h1><br/>
-                    <p>{this.state.data.meals[0].strInstructions}</p><br/>
-                    <h2>Ingredients</h2>
-                    <p>{this.state.data.meals[0].strIngredient1}</p>
-                    <p>{this.state.data.meals[0].strIngredient2}</p>
-                    <p>{this.state.data.meals[0].strIngredient3}</p>
-                    <p>{this.state.data.meals[0].strIngredient4}</p>
-                    <p>{this.state.data.meals[0].strIngredient5}</p>
-                    <p>{this.state.data.meals[0].strIngredient6}</p>
-                    <p>{this.state.data.meals[0].strIngredient7}</p>
-                    <p>{this.state.data.meals[0].strIngredient8}</p>
-                    <p>{this.state.data.meals[0].strIngredient9}</p>
-                    <p>{this.state.data.meals[0].strIngredient10}</p>
-                    <p>{this.state.data.meals[0].strIngredient11}</p>
-                    <p>{this.state.data.meals[0].strIngredient12}</p>
-                    <p>{this.state.data.meals[0].strIngredient13}</p>
-                    <p>{this.state.data.meals[0].strIngredient14}</p>
-                    <p>{this.state.data.meals[0].strIngredient15}</p>
-                    <p>{this.state.data.meals[0].strIngredient16}</p>
-                    <p>{this.state.data.meals[0].strIngredient17}</p>
-                    <p>{this.state.data.meals[0].strIngredient18}</p>
-                    <p>{this.state.data.meals[0].strIngredient19}</p>
-                    <p>{this.state.data.meals[0].strIngredient20}</p>    
-                   <YouTubeModal buttonLabel="Watch on YouTube"  linkYoutube={this.state.linkYoutube}></YouTubeModal>
-                    </div>
+                    this.state.isLoaded ?
+
+                        <div>
+                            <figure>
+                                <img src={this.state.data.meals[0].strMealThumb} alt="recipe-image"></img>
+                            </figure>
+
+                            <article className="recipe">
+                                <section className="recipe-instructions">
+                                    <h2>{this.state.data.meals[0].strMeal}</h2>
+                                    <p>{this.state.data.meals[0].strInstructions}</p>
+                                </section>
+
+                                <section className="recipe-ingredients">
+                                    <h2>Ingredients</h2>
+                                    <ul>
+                                        <li>{this.state.data.meals[0].strMeasure1} {this.state.data.meals[0].strIngredient1}</li>
+                                        <li>{this.state.data.meals[0].strMeasure2} {this.state.data.meals[0].strIngredient2}</li>
+                                        <li>{this.state.data.meals[0].strMeasure3} {this.state.data.meals[0].strIngredient3}</li>
+                                        <li>{this.state.data.meals[0].strMeasure4} {this.state.data.meals[0].strIngredient4}</li>
+                                        <li>{this.state.data.meals[0].strMeasure5} {this.state.data.meals[0].strIngredient5}</li>
+                                        <li>{this.state.data.meals[0].strMeasure6} {this.state.data.meals[0].strIngredient6}</li>
+                                        <li>{this.state.data.meals[0].strMeasure7} {this.state.data.meals[0].strIngredient7}</li>
+                                        <li>{this.state.data.meals[0].strMeasure8} {this.state.data.meals[0].strIngredient8}</li>
+                                        <li>{this.state.data.meals[0].strMeasure9} {this.state.data.meals[0].strIngredient9}</li>
+                                        <li>{this.state.data.meals[0].strMeasure10} {this.state.data.meals[0].strIngredient10}</li>
+                                        <li>{this.state.data.meals[0].strMeasure11} {this.state.data.meals[0].strIngredient11}</li>
+                                        <li>{this.state.data.meals[0].strMeasure12} {this.state.data.meals[0].strIngredient12}</li>
+                                        <li>{this.state.data.meals[0].strMeasure13} {this.state.data.meals[0].strIngredient13}</li>
+                                        <li>{this.state.data.meals[0].strMeasure14} {this.state.data.meals[0].strIngredient14}</li>
+                                        <li>{this.state.data.meals[0].strMeasure15} {this.state.data.meals[0].strIngredient15}</li>
+                                        <li>{this.state.data.meals[0].strMeasure16} {this.state.data.meals[0].strIngredient16}</li>
+                                        <li>{this.state.data.meals[0].strMeasure17} {this.state.data.meals[0].strIngredient17}</li>
+                                        <li>{this.state.data.meals[0].strMeasure18} {this.state.data.meals[0].strIngredient18}</li>
+                                        <li>{this.state.data.meals[0].strMeasure19} {this.state.data.meals[0].strIngredient19}</li>
+                                        <li>{this.state.data.meals[0].strMeasure20} {this.state.data.meals[0].strIngredient20}</li>
+                                    </ul>
+                                    <YouTubeModal buttonLabel="Watch on YouTube" linkYoutube={this.state.linkYoutube}></YouTubeModal>
+                                </section>
+
+                            </article>
+                        </div>
                         :
                         <div>
                             <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
