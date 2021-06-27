@@ -1,1 +1,0 @@
-import './RecipeContent.css'

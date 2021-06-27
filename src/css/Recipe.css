@@ -15,6 +15,15 @@
 .recipe {
     display: flex;
 }
+figure {
+    width: 100%;
+    height: 40%;
+}
+figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 .recipe-instructions {
     width: 72%;
     padding-right: 6%;
