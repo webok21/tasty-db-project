@@ -27,11 +27,12 @@ class Recipe extends Component {
             <Row lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
-                    this.state.isLoaded ?
 
+                    this.state.isLoaded ?
                         <div>
+
                             <figure>
-                                <img src={this.state.data.meals[0].strMealThumb} alt="recipe-image"></img>
+                                <img src={this.state.data.meals[0].strMealThumb} alt="meal"></img>
                             </figure>
 
                             <article className="recipe">
