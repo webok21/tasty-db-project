@@ -1,9 +1,7 @@
 import './../css/Search.css'
 import React, { Component } from 'react';
-
-import SearchItem from '../components/SearchItem';
+import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
-import Error from "../components/Error";
 
 
 class Search extends Component {
@@ -23,25 +21,27 @@ class Search extends Component {
         return (
            
             <div className="search">
-
                 <input className="searchInput input-radius"
                     type="text"
                     placeholder="Type something to search"
                     onChange={e => this.setState({ recipeList: " " + e.target.value })} />
                 {console.log(this.state.data)}
-
-                <Error> <Link to="/search">
+                
+              
+                    <Link to="/">
                     <button type="button"
                     className="input-radius"
                     onClick={() => this.handleSearch()}>Search</button>
-                </Link></Error>
-                    {
+                </Link>
+                
+                      {
                     this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SearchItem
                             data={Key}
                             key={Key.idMeal}
                         />)
                         : <div></div>
+
                 }
 
                 </div>
