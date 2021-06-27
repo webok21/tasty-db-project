@@ -3,10 +3,8 @@
   font-weight: var(--fw900) !important;
   color: var(--orange);
 }
-.Categories {
-  background-color: blue;
-}
-.vs{
+
+.vs {
   display: flex;
   align-items: center;
   justify-content: center;

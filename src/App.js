@@ -15,26 +15,26 @@ import SingleCategory from "./components/SingleCategory";
 import Recipe from "./components/Recipe";
 
 
-
 function App() {
   return (
 
     <Router>
       <Container>
-
-        <Switch>
+      <Switch>
           <Header />
-          </Switch>  
-          <Switch>
+          </Switch>
+         <Switch>
+          
           <Search/>
-          <Route path="/search/:Id" exact component={Search} />
-        </Switch>
+          
+          </Switch>
         
+        <Route path="/search" exact component={Search} />
         <Route path="/" exact component={Categories} />
         <Route path="/meals/:Id" component={SingleCategory} />
         <Route path="/recipe/:Id" component={Recipe} />
-
-        <Switch>
+     
+       <Switch>
           <Footer />
         </Switch>
 

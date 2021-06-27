@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import SearchItem from '../components/SearchItem';
 import { Link } from 'react-router-dom';
+import Error from "../components/Error";
 
 
 class Search extends Component {
@@ -20,7 +21,7 @@ class Search extends Component {
     
     render() {
         return (
-            
+           
             <div className="search">
 
                 <input className="searchInput input-radius"
@@ -29,11 +30,11 @@ class Search extends Component {
                     onChange={e => this.setState({ recipeList: " " + e.target.value })} />
                 {console.log(this.state.data)}
 
-                <Link to="/search">
+                <Error> <Link to="/search">
                     <button type="button"
                     className="input-radius"
                     onClick={() => this.handleSearch()}>Search</button>
-                </Link>
+                </Link></Error>
                     {
                     this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SearchItem
