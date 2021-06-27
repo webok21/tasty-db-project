@@ -23,21 +23,21 @@ function App() {
     <Router>
       <Container>
 
-        <Switch>
-          <Header />
-          </Switch>  
-          <Switch>
-          <Search/>
-          <Route path="/search" exact component={Search} />
-        </Switch>
         
+          <Header />
+         
+          
+          <Search/>
+          
+          <Switch>
+        
+        <Route path="/search" exact component={Search} />
         <Route path="/" exact component={Categories} />
         <Route path="/meals/:Id" component={SingleCategory} />
         <Route path="/recipe/:Id" component={Recipe} />
-
-        <Switch>
-          <Footer />
         </Switch>
+          <Footer />
+        
 
       </Container>
     </Router>

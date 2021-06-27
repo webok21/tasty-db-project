@@ -2,10 +2,8 @@
   font-size: 2.4em;
   font-weight: var(--fw900) !important;
 }
-.Categories {
-  background-color: blue;
-}
-.vs{
+
+.vs {
   display: flex;
   align-items: center;
   justify-content: center;
