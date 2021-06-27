@@ -31,7 +31,7 @@ class Recipe extends Component {
 
                         <div>
                             <figure>
-                                <img src={this.state.data.meals[0].strMealThumb} alt="recipe-image"></img>
+                                <img src={this.state.data.meals[0].strMealThumb} alt="meal"></img>
                             </figure>
 
                             <article className="recipe">

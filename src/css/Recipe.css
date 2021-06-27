@@ -6,14 +6,24 @@
     min-height: 100vh;
 }
 .recipe-container {
-    padding: 4% 3%;
     background: var(--pink);
+    padding: 4% 3%;
+    margin: 0;
 }
 .recipe-container h2 {
     padding: 20px 0;
 }
 .recipe {
     display: flex;
+}
+figure {
+    width: 100%;
+    height: 40%;
+}
+figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .recipe-instructions {
     width: 72%;
