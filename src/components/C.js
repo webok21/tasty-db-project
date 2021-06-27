@@ -15,6 +15,7 @@ const CategoriesItem = (props) => {
                     <img src={props.data.strCategoryThumb} alt="name"></img></Link>
             </div>
         </Col >
+        
 
     );
 }

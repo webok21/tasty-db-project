@@ -13,7 +13,6 @@ import { Container } from "reactstrap";
 import Categories from './components/Categories';
 import SingleCategory from "./components/SingleCategory";
 import Recipe from "./components/Recipe";
-import SearchItem from "./components/SearchItem";
 
 
 
@@ -28,7 +27,7 @@ function App() {
           </Switch>  
           <Switch>
           <Search/>
-          <Route path="/search" exact component={Search} />
+          <Route path="/search/:Id" exact component={Search} />
         </Switch>
         
         <Route path="/" exact component={Categories} />
