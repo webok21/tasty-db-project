@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CategoriesItem from './C';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import randomButton from "./randomButton";
 
 class Categories extends Component {
 
