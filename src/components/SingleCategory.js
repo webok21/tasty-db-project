@@ -5,7 +5,6 @@ import '../css/Loader.css'
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
 import { Row } from 'reactstrap';
-import YouTubeModal from "./YouTubeModal"
 
 
 

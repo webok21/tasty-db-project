@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import CategoriesItem from './C';
 import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class Categories extends Component {
 
@@ -44,13 +45,11 @@ class Categories extends Component {
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
                     data={Key}
                     key={Key.idCategory}
-
-
                 />)}
                 <Col xs="12" md="6" lg="4">
-                    <div className="categoriesItem div-radius">
+                    <Link><div className="categoriesItem div-radius">
                         <h3>Random</h3>
-                    </div>
+                    </div></Link>
                 </Col>
             </Row>
         );
