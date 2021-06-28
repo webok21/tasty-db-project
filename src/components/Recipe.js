@@ -38,7 +38,14 @@ class Recipe extends Component {
                             <article className="recipe">
                                 <section className="recipe-instructions">
                                     <h2>{this.state.data.meals[0].strMeal}</h2>
-                                    <p>{this.state.data.meals[0].strInstructions}</p>
+                                    <ul>
+
+
+                                        {this.state.data.meals[0].strInstructions.split(".").filter(sentence => sentence).map((sentence, i) =>
+                                            <li key={i}>{sentence}.</li>)}
+
+
+                                    </ul>
                                 </section>
 
                                 <section className="recipe-ingredients">

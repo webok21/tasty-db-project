@@ -13,5 +13,10 @@
   min-height: 100vh;
 }
 .categories-layout {
+  display: flex;
+  justify-content: space-between;
   padding: 6%;
+}
+.categories-single-item h2 {
+  margin-bottom: 10%;
 }
