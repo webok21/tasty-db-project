@@ -3,6 +3,7 @@ import axios from 'axios';
 import CategoriesItem from './C';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import randomButton from "./randomButton";
 
 class Categories extends Component {
 
@@ -48,9 +49,20 @@ class Categories extends Component {
                     data={Key}
                     key={Key.idCategory}
                 />)}
+           
+           <Col xs="12" md="6" lg="4">
+            <div className="categoriesItem div-radius" style={{ backgroundColor: 'var(--orange)'}}>
+            <Link to="/random">
+                <h3>Random Meal</h3>
+                <img src="./img/blind.png" alt="name"></img>
+                    
+        </Link>
+        </div>
+        </Col>
                 
-                
-            </Row>:<div></div>
+            </Row>
+             
+            :<div></div>
         );
     }
 }
