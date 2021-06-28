@@ -33,8 +33,9 @@ function App() {
         <Search />
         </ErrorBoundary>
         <Switch>
+        <Route path="/" exact component={Categories} />
 
-          <Route path="/" exact component={Categories} />
+
 
           {/* <Route path="/random" component={Search2} /> */}
           <Route path="/random" component={Random} />
@@ -44,6 +45,7 @@ function App() {
 
           {/* <Route path="/recipe/:Id" component={Search4} /> */}
           <Route path="/recipe/:Id" component={Recipe} />
+          
         </Switch>
 
         <Footer />
