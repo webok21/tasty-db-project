@@ -7,7 +7,7 @@ const SingleCategoryItem = (props) => {
     console.log(props)
     // let words = props.data.strMeal.split(" " , 4)
     return (
-        <Col xs="12" md="12" lg="6" className="div-radius">
+        <Col xs="12" md="6" lg="6" className="div-radius">
             <Link to={`/recipe/${props.data.idMeal}`}>
                 <div className="categories-single-item">
                     {/* <h2>{props.data.strMeal.slice(0,20)}</h2> */}

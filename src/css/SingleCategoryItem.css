@@ -3,6 +3,7 @@
   font-weight: var(--fw900) !important;
   padding: 10%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   min-height: 90vh;
@@ -28,9 +29,6 @@
 }
 .reduced {
   width: 80%;
-}
-.categories-single-item img {
-  width: 100%;
 }
 @media only screen and (max-width: 525px) {
   .categories-single-item {
