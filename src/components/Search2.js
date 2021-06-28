@@ -7,7 +7,11 @@ class Search2 extends Component {
 
     state = { recipeList: "", data: [], isLoaded: false }
 
-
+    hide(){
+        // setTimeout(() => {
+        // document.getElementById("Categories").style.display="none"
+        // }, 1000);
+    }
 
 handleSearch() {
         console.log(this.state.recipeList)

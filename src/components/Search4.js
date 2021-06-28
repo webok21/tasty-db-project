@@ -15,7 +15,11 @@ handleSearch() {
            .then((result) => this.setState({ data: result, isLoaded: true }))
           
     } 
-
+    hide(){
+        // setTimeout(() => {
+        // document.getElementById("").style.display="none"
+        // }, 1000);
+    }
     
     render() {
         return (

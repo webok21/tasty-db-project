@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CategoriesItem from './C';
-import { Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Row } from 'reactstrap';
 
 class Categories extends Component {
 
@@ -10,11 +9,9 @@ class Categories extends Component {
     state = {
         data: [],
         isLoaded: false,
-        show:false
-
     }
     loadData = () => {
-        this.setState({ isLoaded: true, show:true });
+        this.setState({ isLoaded: true});
         return axios
             .get(
                 `http://www.themealdb.com/api/json/v1/1/categories.php`
@@ -38,19 +35,16 @@ class Categories extends Component {
     componentDidMount() {
         this.loadData();
     }
-
     render() {
         return (
-            this.state.show?
-            <Row>
+
+            <Row id="Categories">
                 <h2 class="sectionheading">Or go through our categories</h2>
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
                     data={Key}
                     key={Key.idCategory}
                 />)}
-                
-                
-            </Row>:<div></div>
+            </Row>
         );
     }
 }
