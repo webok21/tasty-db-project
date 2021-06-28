@@ -17,7 +17,7 @@ handleSearch() {
     } 
     hide(){
         setTimeout(() => {
-        document.getElementById("").style.display="none"
+        document.getElementById("categories").style.display="none"
         }, 1000);
     }
     
@@ -36,7 +36,7 @@ handleSearch() {
                     <Link to="/meals/:Id">
                     <button type="button"
                     className="input-radius"
-                    onClick={() => this.handleSearch() }>Search</button>
+                    onClick={() => {this.handleSearch(); this.hide()} }>Search</button>
                 </Link>
                 
                       {

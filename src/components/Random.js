@@ -23,7 +23,7 @@ class Random extends Component {
     }
     render() {
         return (
-            <Row lg="1" className="recipe-container div-radius">
+            <Row id="random"lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
 

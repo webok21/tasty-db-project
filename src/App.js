@@ -17,6 +17,7 @@ import Categories from './components/Categories';
 import SingleCategory from "./components/SingleCategory";
 import Recipe from "./components/Recipe";
 import Random from "./components/Random";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
     <Router>
       <Container>
           <Switch>
-          <Header />  
+          <Link to="/"><Header /></Link>  
           </Switch>
     
         <Route path="/" exact component={Search} />

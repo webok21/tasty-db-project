@@ -24,7 +24,7 @@ class Recipe extends Component {
     }
     render() {
         return (
-            <Row lg="1" className="recipe-container div-radius">
+            <Row id="recipe" lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
 
