@@ -3,7 +3,7 @@ import '../css/Loader.css'
 
 
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
 
 
