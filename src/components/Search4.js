@@ -3,15 +3,7 @@ import React, { Component } from 'react';
 import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
 
-class Search extends Component {
-
-    hide(){
-        setTimeout(() => {
-           
-            this.setState({ show: false  });
-           
-        }, 1000);
-    }
+class Search4 extends Component {
 
     state = { recipeList: "", data: [], isLoaded: false }
 handleSearch() {
@@ -20,7 +12,7 @@ handleSearch() {
          fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
             .then((result) => result.json())
             .then((result) => result)
-           .then((result) => this.setState({ data: result, isLoaded: true, }))
+           .then((result) => this.setState({ data: result, isLoaded: true }))
           
     } 
 
@@ -37,20 +29,20 @@ handleSearch() {
                 {console.log(this.state.data)}
                 
                
-                    <Link to="/">
+                    <Link to="/recipe/:Id">
                     <button type="button"
                     className="input-radius"
-                    onClick={() => {this.handleSearch();this.hide()} }
-                    >Search</button>
+                    onClick={() => this.handleSearch() }>Search</button>
                 </Link>
                 
                       {
-                     this.state.isLoaded ?
+                    this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SearchItem
                             data={Key}
                             key={Key.idMeal}
                         />)
                         : <div></div>
+                        
                 }
 
                 </div>
@@ -59,7 +51,7 @@ handleSearch() {
     }
 }
 
-export default Search;
+export default Search4;
 
 
 

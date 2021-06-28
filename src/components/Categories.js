@@ -9,11 +9,12 @@ class Categories extends Component {
 
     state = {
         data: [],
-        isLoaded: false
+        isLoaded: false,
+        show:false
 
     }
     loadData = () => {
-        this.setState({ isLoaded: true });
+        this.setState({ isLoaded: true, show:true });
         return axios
             .get(
                 `http://www.themealdb.com/api/json/v1/1/categories.php`
@@ -40,18 +41,16 @@ class Categories extends Component {
 
     render() {
         return (
+            this.state.show?
             <Row>
                 <h2 class="sectionheading">Or go through our categories</h2>
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
                     data={Key}
                     key={Key.idCategory}
                 />)}
-                <Col xs="12" md="6" lg="4">
-                    <Link><div className="categoriesItem div-radius">
-                        <h3>Random</h3>
-                    </div></Link>
-                </Col>
-            </Row>
+                
+                
+            </Row>:<div></div>
         );
     }
 }
