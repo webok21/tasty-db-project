@@ -2,6 +2,7 @@ import './../css/Search.css'
 import React, { Component } from 'react';
 import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
+import { Row, Col } from 'reactstrap';
 
 class Search extends Component {
 
@@ -21,31 +22,47 @@ handleSearch() {
             .then((result) => result.json())
             .then((result) => result)
            .then((result) => this.setState({ data: result, isLoaded: true }))
+           .catch(error => {
+            console.error("error: ", error);
+        });
     } 
 
     render() {
         return (
-            <div className="search">
+            <>
+            <Row>
+                
+            <Col className="search">
                 <input className="searchInput input-radius"
+                id ="searchinput"
                     type="text"
                     placeholder="Type something to search"
                     onChange={e => this.setState({ recipeList: " " + e.target.value })} />
                 {console.log(this.state.data)}
+                
+               
                     <Link to="/">
                     <button type="button"
                     className="input-radius"
-                    onClick={() => {this.handleSearch(); this.hide()} }
+                    onClick={() => {this.handleSearch();this.hide()} }
                     >Search</button>
                 </Link>
+            </Col>
+            </Row>
+            <Row id="searchresult">
+            
+            
                       {
                      this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SearchItem
                             data={Key}
                             key={Key.idMeal}
-                     
-                        />):<div></div>
+                        />)
+                        : <div>Loading...</div>
                 }
-                </div>
+            
+            </Row>
+            </>
         );
     }
 }
