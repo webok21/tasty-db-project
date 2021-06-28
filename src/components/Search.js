@@ -21,6 +21,9 @@ handleSearch() {
             .then((result) => result.json())
             .then((result) => result)
            .then((result) => this.setState({ data: result, isLoaded: true }))
+           .catch(error => {
+            console.error("error: ", error);
+        });
     } 
 
     render() {
@@ -43,7 +46,7 @@ handleSearch() {
                             data={Key}
                             key={Key.idMeal}
                      
-                        />):<div></div>
+                        />) :<div></div>
                 }
                 </div>
         );

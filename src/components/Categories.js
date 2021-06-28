@@ -19,7 +19,6 @@ class Categories extends Component {
                 `http://www.themealdb.com/api/json/v1/1/categories.php`
             )
             .then(result => {
-                console.log(result);
                 this.setState({
                     data: result.data.categories,
                     isLoaded: false,
@@ -39,7 +38,6 @@ class Categories extends Component {
     }
     render() {
         return (
-
             <Row id="Categories">
                 <h2 class="sectionheading">Or go through our categories</h2>
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
