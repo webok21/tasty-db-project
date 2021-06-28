@@ -26,7 +26,7 @@ class SingleCategory extends Component {
     }
     render() {
         return (
-            <Row lg="1" className="Categories">
+            <Row lg="1" className="categories-layout">
                 <div className="categories-name">
                     Everything {this.props.match.params.Id}
                 </div>
@@ -41,7 +41,7 @@ class SingleCategory extends Component {
                             <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
                 }
-                </Row>
+            </Row>
         );
     }
 }

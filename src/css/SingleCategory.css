@@ -1,6 +1,8 @@
 .categories-name {
+  color: var(--orange);
   font-size: 2.4em;
   font-weight: var(--fw900) !important;
+  margin-bottom: 3%;
 }
 
 .vs {
@@ -9,4 +11,7 @@
   justify-content: center;
   width: 100vw;
   min-height: 100vh;
+}
+.categories-layout {
+  padding: 6%;
 }
