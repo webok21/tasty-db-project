@@ -3,12 +3,13 @@ import axios from 'axios';
 import CategoriesItem from './C';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f294fcb942394f68527de8ef42512e72a42a062
 
 class Categories extends Component {
-
-
-    state = {
+  state = {
         data: [],
         isLoaded: false,
     }
@@ -38,27 +39,21 @@ class Categories extends Component {
     }
     render() {
         return (
-            
             <Row id="Categories">
                 <h2 className="sectionheading">Or go through our categories</h2>
                 {this.state.data.map((Key, idCategory) => <CategoriesItem
                     data={Key}
                     key={Key.idCategory}
                 />)}
-           
            <Col xs="12" md="6" lg="4">
             <div className="categoriesItem div-radius" style={{ backgroundColor: 'var(--orange)'}}>
             <Link to="/random">
                 <h3>Random Meal</h3>
-                <img src="/img/blind.png" alt="name"></img>
-                    
+                <img src="/img/blind.png" alt="name"></img>      
         </Link>
         </div>
         </Col>
-                
             </Row>
-             
-            
         );
     }
 }
