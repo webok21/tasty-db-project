@@ -1,5 +1,6 @@
 .error{
+    width: 100%;
     color:black;
-    background-color: pink;
+    background-color: #ff6e86;
     border-radius: 25px;
 }

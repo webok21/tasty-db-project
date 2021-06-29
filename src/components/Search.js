@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
+import axios from 'axios';
 
 class Search extends Component {
 
@@ -14,10 +15,11 @@ class Search extends Component {
     }
 
 
-    state = { recipeList: "", data: [], isLoaded: false }
+    state = { recipeList: "", data: [], isLoaded: false, mergedData:[] }
     handleSearch() {
-        console.log(this.state.recipeList)
+        console.log(this.state.mergedData)
 
+        
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
             .then((result) => result.json())
             .then((result) => result)
@@ -25,6 +27,22 @@ class Search extends Component {
             .catch(error => {
                 console.error("error: ", error);
             });
+
+
+        // Promise.all([
+        //     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${this.state.recipeList}`).then(res => res.json()),
+        //     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`).then(res => res.json())
+        // ]).then(([urlOneData, urlTwoData]) => {
+        //     this.setState({
+        //         mergedData:urlOneData.concat(urlTwoData)
+        //     })
+        //     .catch(error => {
+        //         console.error("error: ", error);
+        //     });
+        // })
+
+
+
     }
 
     render() {
@@ -37,7 +55,8 @@ class Search extends Component {
                             id="searchinput"
                             type="text"
                             placeholder="Type something to search"
-                            onChange={e => this.setState({ recipeList: " " + e.target.value })} />
+                            onInput={e => this.setState({ recipeList: " " + e.target.value })} 
+                            />
                         {console.log(this.state.data)}
 
 
@@ -53,7 +72,7 @@ class Search extends Component {
 
                     {
                         this.state.isLoaded ?
-                            this.state.data.meals.map((Key, idMeal) => <SearchItem
+                            this.state.mergedData.meals.map((Key, idMeal) => <SearchItem
                                 data={Key}
                                 key={Key.idMeal}
                             />)
