@@ -49,8 +49,7 @@ class Search extends Component {
                         </Link>
                     </Col>
                 </Row>
-                <Row id="searchresult">
-
+                <Row>
 
                     {
                         this.state.isLoaded ?

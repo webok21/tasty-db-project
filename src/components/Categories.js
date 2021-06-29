@@ -4,7 +4,6 @@ import CategoriesItem from './C';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-
 class Categories extends Component {
 
 

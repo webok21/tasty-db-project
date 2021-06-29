@@ -11,7 +11,7 @@ const SingleCategoryItem = (props) => {
             <Link to={`/recipe/${props.data.idMeal}`}>
                 <div className="categories-single-item">
                     <h2>{props.data.strMeal.split("with")[0]}</h2>
-                    <img src={props.data.strMealThumb} alt="name"></img>
+                    <img src={props.data.strMealThumb} alt="meal"></img>
                 </div>
             </Link>
         </Col >
