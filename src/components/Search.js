@@ -43,6 +43,7 @@ class Search extends Component {
 
                         <Link to="/">
                             <button type="button"
+                                id="searchbutton"
                                 className="input-radius"
                                 onClick={() => { this.handleSearch(); this.hide() }}
                             >Search</button>

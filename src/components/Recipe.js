@@ -3,7 +3,7 @@ import '../css/Loader.css'
 
 
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
 
 
@@ -38,6 +38,7 @@ class Recipe extends Component {
                             <article className="recipe">
                                 <section className="recipe-instructions">
                                     <h2>{this.state.data.meals[0].strMeal}</h2>
+                                    <h2 id="mobile-instructions">Instructions</h2>
                                     <ul>
                                         {this.state.data.meals[0].strInstructions.split(".").filter(sentence => sentence).map((sentence, i) =>
                                             <li key={i}>{sentence}.</li>)}
@@ -45,6 +46,8 @@ class Recipe extends Component {
                                 </section>
 
                                 <section className="recipe-ingredients">
+                                    <h1>{this.state.data.meals[0].strMeal}</h1>
+                                    <div>
                                     <h2>Ingredients</h2>
                                     <ul>
                                         <li>{this.state.data.meals[0].strMeasure1} {this.state.data.meals[0].strIngredient1}</li>
@@ -68,6 +71,7 @@ class Recipe extends Component {
                                         <li>{this.state.data.meals[0].strMeasure19} {this.state.data.meals[0].strIngredient19}</li>
                                         <li>{this.state.data.meals[0].strMeasure20} {this.state.data.meals[0].strIngredient20}</li>
                                     </ul>
+                                    </div>
                                     <YouTubeModal buttonLabel="Watch on YouTube" linkYoutube={this.state.linkYoutube}></YouTubeModal>
                                 </section>
 

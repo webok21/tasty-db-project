@@ -4,7 +4,7 @@ import '../css/Loader.css'
 
 import React, { Component } from 'react';
 import SingleCategoryItem from '../components/SingleCategoryItem';
-import { Row } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
 
 
@@ -25,13 +25,13 @@ class SingleCategory extends Component {
     }
     render() {
         return (
-            
-            <Row id="categories" className="categories-layout">
+            <Container>
+            <Row id="categories">
                 <div className="categories-name">
                     Everything {this.props.match.params.Id}
                 </div>
-            
-            
+            </Row>
+           <Row className="categories-layout">
                 {
                     this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
@@ -44,7 +44,7 @@ class SingleCategory extends Component {
                         </div>
                 }
             </Row>
-           
+            </Container>
         );
     }
 }

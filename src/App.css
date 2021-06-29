@@ -58,3 +58,11 @@ h3 {
 .container {
   margin: 100px;
 }
+
+/* Some media-queries */
+@media only screen and (max-width: 768px) {
+  .header h1,
+  .sectionheading {
+    font-size: 1.4rem !important;
+  }
+}
