@@ -14,7 +14,7 @@ const SingleCategoryItem = (props) => {
                     <img src={props.data.strMealThumb} alt="meal"></img>
                 </div>
             </Link>
-        </Col >
+        </Col>
     );
 }
 

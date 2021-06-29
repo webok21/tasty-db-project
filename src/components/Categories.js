@@ -28,7 +28,6 @@ class Categories extends Component {
                 console.error("error: ", error);
                 this.setState({
                     error: `${error}`,
-                
                 });
             });
     };
