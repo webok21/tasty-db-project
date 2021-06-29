@@ -3,7 +3,7 @@ import '../css/Loader.css'
 
 
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
 
 
@@ -48,29 +48,29 @@ class Recipe extends Component {
                                 <section className="recipe-ingredients">
                                     <h1>{this.state.data.meals[0].strMeal}</h1>
                                     <div>
-                                    <h2>Ingredients</h2>
-                                    <ul>
-                                        <li>{this.state.data.meals[0].strMeasure1} {this.state.data.meals[0].strIngredient1}</li>
-                                        <li>{this.state.data.meals[0].strMeasure2} {this.state.data.meals[0].strIngredient2}</li>
-                                        <li>{this.state.data.meals[0].strMeasure3} {this.state.data.meals[0].strIngredient3}</li>
-                                        <li>{this.state.data.meals[0].strMeasure4} {this.state.data.meals[0].strIngredient4}</li>
-                                        <li>{this.state.data.meals[0].strMeasure5} {this.state.data.meals[0].strIngredient5}</li>
-                                        <li>{this.state.data.meals[0].strMeasure6} {this.state.data.meals[0].strIngredient6}</li>
-                                        <li>{this.state.data.meals[0].strMeasure7} {this.state.data.meals[0].strIngredient7}</li>
-                                        <li>{this.state.data.meals[0].strMeasure8} {this.state.data.meals[0].strIngredient8}</li>
-                                        <li>{this.state.data.meals[0].strMeasure9} {this.state.data.meals[0].strIngredient9}</li>
-                                        <li>{this.state.data.meals[0].strMeasure10} {this.state.data.meals[0].strIngredient10}</li>
-                                        <li>{this.state.data.meals[0].strMeasure11} {this.state.data.meals[0].strIngredient11}</li>
-                                        <li>{this.state.data.meals[0].strMeasure12} {this.state.data.meals[0].strIngredient12}</li>
-                                        <li>{this.state.data.meals[0].strMeasure13} {this.state.data.meals[0].strIngredient13}</li>
-                                        <li>{this.state.data.meals[0].strMeasure14} {this.state.data.meals[0].strIngredient14}</li>
-                                        <li>{this.state.data.meals[0].strMeasure15} {this.state.data.meals[0].strIngredient15}</li>
-                                        <li>{this.state.data.meals[0].strMeasure16} {this.state.data.meals[0].strIngredient16}</li>
-                                        <li>{this.state.data.meals[0].strMeasure17} {this.state.data.meals[0].strIngredient17}</li>
-                                        <li>{this.state.data.meals[0].strMeasure18} {this.state.data.meals[0].strIngredient18}</li>
-                                        <li>{this.state.data.meals[0].strMeasure19} {this.state.data.meals[0].strIngredient19}</li>
-                                        <li>{this.state.data.meals[0].strMeasure20} {this.state.data.meals[0].strIngredient20}</li>
-                                    </ul>
+                                        <h2>Ingredients</h2>
+                                        <ul>
+                                            <li>{this.state.data.meals[0].strMeasure1} {this.state.data.meals[0].strIngredient1}</li>
+                                            <li>{this.state.data.meals[0].strMeasure2} {this.state.data.meals[0].strIngredient2}</li>
+                                            <li>{this.state.data.meals[0].strMeasure3} {this.state.data.meals[0].strIngredient3}</li>
+                                            <li>{this.state.data.meals[0].strMeasure4} {this.state.data.meals[0].strIngredient4}</li>
+                                            <li>{this.state.data.meals[0].strMeasure5} {this.state.data.meals[0].strIngredient5}</li>
+                                            <li>{this.state.data.meals[0].strMeasure6} {this.state.data.meals[0].strIngredient6}</li>
+                                            <li>{this.state.data.meals[0].strMeasure7} {this.state.data.meals[0].strIngredient7}</li>
+                                            <li>{this.state.data.meals[0].strMeasure8} {this.state.data.meals[0].strIngredient8}</li>
+                                            <li>{this.state.data.meals[0].strMeasure9} {this.state.data.meals[0].strIngredient9}</li>
+                                            <li>{this.state.data.meals[0].strMeasure10} {this.state.data.meals[0].strIngredient10}</li>
+                                            <li>{this.state.data.meals[0].strMeasure11} {this.state.data.meals[0].strIngredient11}</li>
+                                            <li>{this.state.data.meals[0].strMeasure12} {this.state.data.meals[0].strIngredient12}</li>
+                                            <li>{this.state.data.meals[0].strMeasure13} {this.state.data.meals[0].strIngredient13}</li>
+                                            <li>{this.state.data.meals[0].strMeasure14} {this.state.data.meals[0].strIngredient14}</li>
+                                            <li>{this.state.data.meals[0].strMeasure15} {this.state.data.meals[0].strIngredient15}</li>
+                                            <li>{this.state.data.meals[0].strMeasure16} {this.state.data.meals[0].strIngredient16}</li>
+                                            <li>{this.state.data.meals[0].strMeasure17} {this.state.data.meals[0].strIngredient17}</li>
+                                            <li>{this.state.data.meals[0].strMeasure18} {this.state.data.meals[0].strIngredient18}</li>
+                                            <li>{this.state.data.meals[0].strMeasure19} {this.state.data.meals[0].strIngredient19}</li>
+                                            <li>{this.state.data.meals[0].strMeasure20} {this.state.data.meals[0].strIngredient20}</li>
+                                        </ul>
                                     </div>
                                     <YouTubeModal buttonLabel="Watch on YouTube" linkYoutube={this.state.linkYoutube}></YouTubeModal>
                                 </section>
