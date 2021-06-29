@@ -86,5 +86,5 @@ class Recipe extends Component {
         );
     }
 }
-
+// element.strMeasure`${i}`
 export default Recipe;
