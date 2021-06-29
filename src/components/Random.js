@@ -14,7 +14,7 @@ class Random extends Component {
         linkYoutube: []
     }
     componentDidMount() {
-        fetch(`http://www.themealdb.com/api/json/v1/1/random.php`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
             .then((result) => result.json())
             .then((result) => result)
             .then((result) => this.setState({ data: result, isLoaded: true, linkYoutube: result.meals[0].strYoutube }))
