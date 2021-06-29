@@ -2,7 +2,6 @@ import React from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../css/ErrorBoundary.css'
-import Categories from './Categories';
 
 
 class ErrorBoundary extends React.Component {
