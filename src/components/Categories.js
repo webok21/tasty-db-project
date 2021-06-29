@@ -3,10 +3,6 @@ import axios from 'axios';
 import CategoriesItem from './C';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-
->>>>>>> 2f294fcb942394f68527de8ef42512e72a42a062
 
 class Categories extends Component {
   state = {
