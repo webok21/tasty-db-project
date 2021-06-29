@@ -17,16 +17,25 @@ import Categories from './components/Categories';
 import SingleCategory from "./components/SingleCategory";
 import Recipe from "./components/Recipe";
 import Random from "./components/Random";
+import { Link } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
+import Search from "./components/Search";
 
 function App() {
   return (
 
     <Router>
-      <Container>
-        <Header />
-        <Switch>
 
-          <Route path="/" exact component={Categories} />
+      <Container>
+       
+        <Header/> 
+        <ErrorBoundary>
+        <Search />
+        </ErrorBoundary>
+        <Switch>
+        <Route path="/" exact component={Categories} />
+
+
 
           {/* <Route path="/random" component={Search2} /> */}
           <Route path="/random" component={Random} />
@@ -36,13 +45,14 @@ function App() {
 
           {/* <Route path="/recipe/:Id" component={Search4} /> */}
           <Route path="/recipe/:Id" component={Recipe} />
+          
         </Switch>
 
         <Footer />
 
       </Container>
     </Router>
-
+   
   );
 }
 

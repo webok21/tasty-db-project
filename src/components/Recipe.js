@@ -3,7 +3,7 @@ import '../css/Loader.css'
 
 
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
 
 
@@ -24,7 +24,7 @@ class Recipe extends Component {
     }
     render() {
         return (
-            <Row lg="1" className="recipe-container div-radius">
+            <Row id="recipe" lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
 
@@ -44,7 +44,10 @@ class Recipe extends Component {
                                         {this.state.data.meals[0].strInstructions.split(".").filter(sentence => sentence).map((sentence, i) =>
                                             <li key={i}>{sentence}.</li>)}
 
+                                        {/* {this.state.data.meals[0].strInstructions.split(/[.]/).filter(sentence => sentence).map((sentence, i) =>
+                                            <li key={i} > {sentence}</li>)} */}
 
+                                        {/* {this.state.data.meals[0].strInstructions.split(/[\.]/).filter(sentence => sentence).map((sentence, i) => `<li>${sentence}</li>`).join('')} */}
                                     </ul>
                                 </section>
 

@@ -14,22 +14,18 @@ class Random extends Component {
         linkYoutube: []
     }
     componentDidMount() {
-       console.log(this.state.result)
         fetch(`http://www.themealdb.com/api/json/v1/1/random.php`)
             .then((result) => result.json())
             .then((result) => result)
             .then((result) => this.setState({ data: result, isLoaded: true, linkYoutube: result.meals[0].strYoutube }))
-
     }
     render() {
         return (
-            <Row lg="1" className="recipe-container div-radius">
+            <Row id="random"lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
-
                     this.state.isLoaded ?
                         <div>
-
                             <figure>
                                 <img src={this.state.data.meals[0].strMealThumb} alt="meal"></img>
                             </figure>

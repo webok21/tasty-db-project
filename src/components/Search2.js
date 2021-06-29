@@ -8,9 +8,9 @@ class Search2 extends Component {
     state = { recipeList: "", data: [], isLoaded: false }
 
     hide(){
-        // setTimeout(() => {
-        // document.getElementById("Categories").style.display="none"
-        // }, 1000);
+        setTimeout(() => {
+        document.getElementById("random").style.display="none"
+        }, 1000);
     }
 
 handleSearch() {
@@ -38,7 +38,7 @@ handleSearch() {
                     <Link to="/random">
                     <button type="button"
                     className="input-radius"
-                    onClick={() => this.handleSearch() }>Search</button>
+                    onClick={() => {this.handleSearch(); this.hide()} }>Search</button>
                 </Link>
                 
                       {
