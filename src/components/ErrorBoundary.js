@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../css/ErrorBoundary.css'
+import Categories from './Categories';
 
 
 class ErrorBoundary extends React.Component {
@@ -15,11 +16,10 @@ class ErrorBoundary extends React.Component {
     
     this.setState({ hasError: true });
   }
-  hide(){
+  hideMe(){
     setTimeout(() => {
-    document.getElementById("error").style.display="none"
-    
-    }, 15000);
+    document.getElementById("error").style.display="none";
+    }, 5000);
 }
 
 
@@ -28,10 +28,10 @@ class ErrorBoundary extends React.Component {
      
       return <div>
         <Search/>
-      <div id="error" className="error" onLoad={this.hide()}>
-        
+      <div id="error" className="error" onLoad={this.hideMe()}>
         <h1> Sorry! We didnt´t found that, but you can try this 
-          <Link to="/random">Recipe</Link>. 
+          <Link to="/random">Recipe
+          </Link>. 
           </h1></div></div>
     }
     return this.props.children;
