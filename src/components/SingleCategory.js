@@ -26,24 +26,24 @@ class SingleCategory extends Component {
     render() {
         return (
             <Container>
-            <Row id="categories">
-                <div className="categories-name">
-                    Everything {this.props.match.params.Id}
-                </div>
-            </Row>
-           <Row className="categories-layout">
-                {
-                    this.state.isLoaded ?
-                        this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
-                            data={Key}
-                            key={Key.idMeal}
-                        />)
-                        :
-                        <div>
-                            <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
-                        </div>
-                }
-            </Row>
+                <Row id="categories">
+                    <div className="categories-name">
+                        Everything {this.props.match.params.Id}
+                    </div>
+                </Row>
+                <Row className="categories-layout">
+                    {
+                        this.state.isLoaded ?
+                            this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
+                                data={Key}
+                                key={Key.idMeal}
+                            />)
+                            :
+                            <div>
+                                <div className="vs"><div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                            </div>
+                    }
+                </Row>
             </Container>
         );
     }

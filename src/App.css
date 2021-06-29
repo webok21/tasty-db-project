@@ -56,7 +56,7 @@ h3 {
   font-weight: var(--fw900) !important;
 }
 .container {
-  padding: 3%;
+  padding: 3% 0;
   margin: 0 auto;
 }
 
