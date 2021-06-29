@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CategoriesItem from './C';
-import { Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
+import { Row } from 'reactstrap';
 
->>>>>>> 2f294fcb942394f68527de8ef42512e72a42a062
 
 class Categories extends Component {
-  state = {
+    state = {
         data: [],
         isLoaded: false,
     }
     loadData = () => {
-        this.setState({ isLoaded: true});
+        this.setState({ isLoaded: true });
         return axios
             .get(
                 `https://www.themealdb.com/api/json/v1/1/categories.php`
@@ -45,14 +41,14 @@ class Categories extends Component {
                     data={Key}
                     key={Key.idCategory}
                 />)}
-           <Col xs="12" md="6" lg="4">
-            <div className="categoriesItem div-radius" style={{ backgroundColor: 'var(--orange)'}}>
-            <Link to="/random">
-                <h3>Random Meal</h3>
-                <img src="/img/blind.png" alt="name"></img>      
-        </Link>
-        </div>
-        </Col>
+                <Col xs="12" md="6" lg="4">
+                    <div className="categoriesItem div-radius" style={{ backgroundColor: 'var(--orange)' }}>
+                        <Link to="/random">
+                            <h3>Random Meal</h3>
+                            <img src="/img/blind.png" alt="name"></img>
+                        </Link>
+                    </div>
+                </Col>
             </Row>
         );
     }
