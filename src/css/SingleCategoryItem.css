@@ -15,6 +15,7 @@
   width: 46%;
   margin: 2%;
 }
+
 .categories-layout div:nth-of-type(4n + 3) {
   background: var(--orange);
 }
