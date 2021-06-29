@@ -10,22 +10,41 @@
 .categories-single-item h2 {
   margin-bottom: 10%;
 }
+.categories-layout div {
+  border-radius: 15px;
+}
 .categories-layout div:not(:first-of-type) {
   width: 46%;
   margin: 2%;
 }
-.categories-layout div:nth-of-type(4n + 3) {
+.categories-layout div:nth-of-type(4n+3) {
   background: var(--orange);
 }
-.categories-layout div:nth-of-type(4n + 4) {
+.categories-layout div:nth-of-type(4n+4) {
   background: var(--orange);
 }
-.categories-layout div:nth-of-type(4n + 2) {
+.categories-layout div:nth-of-type(4n+2) {
   background: var(--pink);
 }
-.categories-layout div:nth-of-type(4n + 5) {
+.categories-layout div:nth-of-type(4n+5) {
   background: var(--pink);
 }
+/* .categories-single-item:not(:first-of-type) {
+  width: 46%;
+  margin: 2%;
+}
+.categories-single-item:nth-of-type(4n + 3) {
+  background: var(--orange);
+}
+.categories-single-item:nth-of-type(4n + 4) {
+  background: var(--orange);
+}
+.categories-single-item:nth-of-type(4n + 2) {
+  background: var(--pink);
+}
+.categories-single-item:nth-of-type(4n + 5) {
+  background: var(--pink);
+} */
 .reduced {
   width: 80%;
 }

@@ -15,7 +15,7 @@ const SearchItem = (props) => {
     return (
         <Col xs="12" md="4" lg="4" onClick={() => { hide() }}>
             <Link to={`/recipe/${props.data.idMeal}`}>
-                <div className="categories-single-item div-radius">
+                <div className="result-item div-radius">
                     <h2>{props.data.strMeal}</h2>
                     <img src={props.data.strMealThumb} alt="name"></img>
                 </div>
