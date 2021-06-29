@@ -17,9 +17,7 @@ class Search extends Component {
 
     state = { recipeList: "", data: [], isLoaded: false, mergedData:[] }
     handleSearch() {
-        console.log(this.state.mergedData)
-
-        
+        console.log(this.state.data)
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
             .then((result) => result.json())
             .then((result) => result)
@@ -27,22 +25,6 @@ class Search extends Component {
             .catch(error => {
                 console.error("error: ", error);
             });
-
-
-        // Promise.all([
-        //     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${this.state.recipeList}`).then(res => res.json()),
-        //     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`).then(res => res.json())
-        // ]).then(([urlOneData, urlTwoData]) => {
-        //     this.setState({
-        //         mergedData:urlOneData.concat(urlTwoData)
-        //     })
-        //     .catch(error => {
-        //         console.error("error: ", error);
-        //     });
-        // })
-
-
-
     }
 
     render() {
@@ -55,13 +37,15 @@ class Search extends Component {
                             id="searchinput"
                             type="text"
                             placeholder="Type something to search"
-                            onInput={e => this.setState({ recipeList: " " + e.target.value })} 
+                            onChange={e => this.setState({ recipeList: " " + e.target.value })} 
+                            onInput={() => { this.handleSearch(); this.hide() }}
                             />
                         {console.log(this.state.data)}
 
 
                         <Link to="/">
                             <button type="button"
+                                id="searchbutton"
                                 className="input-radius"
                                 onClick={() => { this.handleSearch(); this.hide() }}
                             >Search</button>
@@ -69,16 +53,14 @@ class Search extends Component {
                     </Col>
                 </Row>
                 <Row id="searchresult">
-
                     {
                         this.state.isLoaded ?
-                            this.state.mergedData.meals.map((Key, idMeal) => <SearchItem
+                            this.state.data.meals.map((Key, idMeal) => <SearchItem
                                 data={Key}
                                 key={Key.idMeal}
                             />)
                             : <div>Loading...</div>
                     }
-
                 </Row>
             </div>
         );

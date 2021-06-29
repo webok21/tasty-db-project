@@ -1,6 +1,5 @@
-.error{
-    width: 100%;
-    color:black;
-    background-color: #ff6e86;
-    border-radius: 25px;
+.error {
+  color: black;
+  background-color: var(--orange);
+  border-radius: 25px;
 }
