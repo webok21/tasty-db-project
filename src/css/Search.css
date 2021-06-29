@@ -24,7 +24,27 @@
   margin: 20px;
   border: none;
 }
-
+#searchresult div {
+  margin-bottom: 2%;
+}
+.result-item {
+  font-size: 1.8em;
+  font-weight: var(--fw900) !important;
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-item {
+  background: var(--pink);
+ }  
+ .result-item h2 {
+  margin-bottom: 10%;
+}
+.result-item img {
+  width: 100%;
+}
 @media only screen and (max-width: 761px) {
   .search {
     flex-direction: column;

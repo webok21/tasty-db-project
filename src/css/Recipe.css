@@ -6,9 +6,9 @@
   min-height: 100vh;
 }
 .recipe-container {
-  background: var(--pink);
-  padding: 4% 3%;
-}
+    background: var(--pink);
+    padding: 10% 3%;
+  }
 .recipe-container h2 {
   padding: 20px 0;
 }

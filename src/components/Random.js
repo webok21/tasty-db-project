@@ -1,7 +1,6 @@
 import './../css/Recipe.css'
 import '../css/Loader.css'
 
-
 import React, { Component } from 'react';
 import { Row } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
@@ -21,7 +20,7 @@ class Random extends Component {
     }
     render() {
         return (
-            <Row id="random"lg="1" className="recipe-container div-radius">
+            <Row id="random" lg="1" className="recipe-container div-radius">
                 {console.log(this.state.data.meals)}
                 {
                     this.state.isLoaded ?
@@ -33,7 +32,10 @@ class Random extends Component {
                             <article className="recipe">
                                 <section className="recipe-instructions">
                                     <h2>{this.state.data.meals[0].strMeal}</h2>
-                                    <p>{this.state.data.meals[0].strInstructions}</p>
+                                    <ul>
+                                        {this.state.data.meals[0].strInstructions.split(".").filter(sentence => sentence).map((sentence, i) =>
+                                            <li key={i}>{sentence}.</li>)}
+                                    </ul>
                                 </section>
 
                                 <section className="recipe-ingredients">
