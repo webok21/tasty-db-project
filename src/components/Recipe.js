@@ -3,7 +3,7 @@ import '../css/Loader.css'
 
 
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import YouTubeModal from "./YouTubeModal"
 
 
@@ -16,7 +16,7 @@ class Recipe extends Component {
     componentDidMount() {
         let id = this.props.match.params.Id
         console.log(id)
-        fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then((result) => result.json())
             .then((result) => result)
             .then((result) => this.setState({ data: result, isLoaded: true, linkYoutube: result.meals[0].strYoutube }))
