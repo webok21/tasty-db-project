@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
   hideMe(){
     setTimeout(() => {
     document.getElementById("error").style.display="none";
-    }, 5000);
+    }, 7000);
 }
 
 
