@@ -51,7 +51,6 @@ class Search extends Component {
                 </Row>
                 <Row id="searchresult">
 
-
                     {
                         this.state.isLoaded ?
                             this.state.data.meals.map((Key, idMeal) => <SearchItem

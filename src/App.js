@@ -16,6 +16,17 @@ import Random from "./components/Random";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Search from "./components/Search";
 
+
+const SearchComponent=()=>(
+<Switch>
+<Route path="/" component={Search} />
+<Route path="/random" component={Search} />
+<Route path="/meals/:Id" component={Search} />
+<Route path="/recipe/:Id" component={Search} />
+</Switch>
+)
+
+
 function App() {
   return (
 
@@ -25,22 +36,17 @@ function App() {
        
         <Header/> 
         <ErrorBoundary>
-        <Search />
+        <SearchComponent />
         </ErrorBoundary>
+      
         <Switch>
         <Route path="/" exact component={Categories} />
 
-
-
-          {/* <Route path="/random" component={Search2} /> */}
           <Route path="/random" component={Random} />
 
-          {/* <Route path="/meals/:Id" component={Search3} /> */}
           <Route path="/meals/:Id" component={SingleCategory} />
 
-          {/* <Route path="/recipe/:Id" component={Search4} /> */}
           <Route path="/recipe/:Id" component={Recipe} />
-          
         </Switch>
 
         <Footer />
