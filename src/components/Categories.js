@@ -16,7 +16,7 @@ class Categories extends Component {
         this.setState({ isLoaded: true});
         return axios
             .get(
-                `http://www.themealdb.com/api/json/v1/1/categories.php`
+                `https://www.themealdb.com/api/json/v1/1/categories.php`
             )
             .then(result => {
                 this.setState({
