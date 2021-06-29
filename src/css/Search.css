@@ -16,7 +16,7 @@
   color: var(--pink);
   font-size: 0.7em;
 }
-.search button {
+#searchbutton {
   background: var(--pink);
   font-weight: var(--fw900);
   width: 100%;
@@ -38,8 +38,8 @@
 }
 .result-item {
   background: var(--pink);
- }  
- .result-item h2 {
+}
+.result-item h2 {
   margin-bottom: 10%;
 }
 .result-item img {
@@ -49,8 +49,11 @@
   .search {
     flex-direction: column;
   }
-  .searchInput,
-  .search button {
+
+  .searchInput {
     width: 100%;
+  }
+  #searchbutton {
+    font-size: 0.8rem;
   }
 }
