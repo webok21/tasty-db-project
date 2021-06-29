@@ -48,7 +48,6 @@ h1 {
   font-weight: var(--fw900) !important;
 }
 h2 {
-  font-size: 1.8em;
   font-weight: var(--fw900) !important;
 }
 h3 {
@@ -56,6 +55,6 @@ h3 {
   color: var(--white);
   font-weight: var(--fw900) !important;
 }
-.container { 
+.container {
   margin: 100px;
 }

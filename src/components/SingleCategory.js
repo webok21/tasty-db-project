@@ -25,10 +25,13 @@ class SingleCategory extends Component {
     }
     render() {
         return (
-            <Row id="categories" lg="1" className="categories-layout">
+            
+            <Row id="categories" className="categories-layout">
                 <div className="categories-name">
                     Everything {this.props.match.params.Id}
                 </div>
+            
+            
                 {
                     this.state.isLoaded ?
                         this.state.data.meals.map((Key, idMeal) => <SingleCategoryItem
@@ -41,6 +44,7 @@ class SingleCategory extends Component {
                         </div>
                 }
             </Row>
+           
         );
     }
 }

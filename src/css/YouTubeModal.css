@@ -1,0 +1,25 @@
+.modal-body > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-body > div > div {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+.modal-body > div > div iframe,
+.modal-body > div > div object,
+.modal-body > div > div embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-dialog {
+  width: 47.5%;
+}
