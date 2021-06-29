@@ -2,7 +2,7 @@
   color: var(--orange);
   font-size: 2.4em;
   font-weight: var(--fw900) !important;
-  margin-bottom: 3%;
+  margin: 0 6%;
 }
 
 .vs {

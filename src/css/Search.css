@@ -7,7 +7,7 @@
 .searchInput {
   color: var(--pink);
   background: var(--input-bg);
-  width: 40%;
+  width: 35%;
   height: 60px;
   padding-left: 20px;
   border: none;
