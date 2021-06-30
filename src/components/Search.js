@@ -3,19 +3,24 @@ import React, { Component } from 'react';
 import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-import axios from 'axios';
 
 class Search extends Component {
+
+
+    
 
 
     hide() {
         setTimeout(() => {
             document.getElementById("Categories").style.display = "none"
-        }, 100);
+        }, 800);
     }
 
 
-    state = { recipeList: "", data: [], isLoaded: false, mergedData:[] }
+
+
+
+    state = { recipeList: "", data: [], isLoaded: false, mergedData: [] }
     handleSearch() {
 setTimeout(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
@@ -39,9 +44,10 @@ setTimeout(() => {
                             id="searchinput"
                             type="text"
                             placeholder="Type something to search"
-                            onChange={e => this.setState({ recipeList: " " + e.target.value })} 
-                            onInput={() => { this.handleSearch(); this.hide() }}
-                            />
+                            onChange={e => this.setState({ recipeList: " " + e.target.value })}
+                            onInput={() => { this.handleSearch(); }}
+                            onMouseOver={e => this.setState({ recipeList: " " + e.target.value }) }
+                        />
                         {console.log(this.state.data)}
 
 

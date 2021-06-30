@@ -32,8 +32,9 @@ function App() {
 
     <Router>
       <Container>
-       
+       <Switch>
         <Header/> 
+        </Switch>
         <ErrorBoundary>
         <SearchComponent />
         </ErrorBoundary>

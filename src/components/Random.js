@@ -69,7 +69,7 @@ class Random extends Component {
                         </div>
                         :
                         <div>
-                            <div className="vs"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                            <div className="vs"><div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                         </div>
                 }
             </Row>
