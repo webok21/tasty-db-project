@@ -11,20 +11,22 @@ class Search extends Component {
     hide() {
         setTimeout(() => {
             document.getElementById("Categories").style.display = "none"
-        }, 1000);
+        }, 100);
     }
 
 
     state = { recipeList: "", data: [], isLoaded: false, mergedData:[] }
     handleSearch() {
-        console.log(this.state.data)
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
+setTimeout(() => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
             .then((result) => result.json())
             .then((result) => result)
             .then((result) => this.setState({ data: result, isLoaded: true }))
             .catch(error => {
                 console.error("error: ", error);
             });
+}, 200);        
+        
     }
 
     render() {
