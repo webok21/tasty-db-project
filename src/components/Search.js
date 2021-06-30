@@ -52,7 +52,7 @@ componentWillUnmount(){
                         <input className="searchInput input-radius"
                             id="searchinput"
                             type="text"
-                            placeholder="Type something to search"
+                            placeholder="Start typing to search"
                             onChange={e => this.setState({ recipeList: e.target.value })}
                             onInput={() => { this.componentDidMount(); this.show() }}
                         />
@@ -64,7 +64,7 @@ componentWillUnmount(){
                                 id="searchbutton"
                                 className="input-radius"
                                 onClick={() => { this.componentDidMount(); this.hide2() }}
-                            >Search</button>
+                            >Get a random recipe</button>
                         </Link>
                     </Col>
                 </Row>

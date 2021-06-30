@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 .searchInput {
   color: var(--pink);
@@ -52,7 +52,6 @@
     flex-direction: column;
   }
 
-  #searchbutton,
   .searchInput {
     width: 100%;
   }

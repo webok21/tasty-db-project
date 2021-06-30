@@ -28,11 +28,11 @@ class ErrorBoundary extends React.Component {
       return <div>
         <Search/>
       <div id="error" className="error" onLoad={this.hideMe()}>
-        <h3> Sorry! We didnt´t found that, but you can try this:
+        <h3> Sorry! No tasty result, but you can try this:
         </h3>
           <div>
           <Link to="/random">
-          <button id="errorbutton">Recipe please</button>
+          <button id="errorbutton">Gimme one</button>
           </Link>
           </div>
           </div>
