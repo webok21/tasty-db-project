@@ -7,32 +7,41 @@ import { Row, Col } from 'reactstrap';
 class Search extends Component {
 
 
-    
-
-
     hide() {
         setTimeout(() => {
             document.getElementById("Categories").style.display = "none"
         }, 800);
     }
 
-
+    hide2(){
+        document.getElementById("searchresult").style.display = "none"
+    }
+    show(){
+        document.getElementById("searchresult").style.display = "flex"
+    }
 
 
 
     state = { recipeList: "", data: [], isLoaded: false, mergedData: [] }
-    handleSearch() {
-setTimeout(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
-            .then((result) => result.json())
-            .then((result) => result)
-            .then((result) => this.setState({ data: result, isLoaded: true }))
-            .catch(error => {
-                console.error("error: ", error);
-            });
-}, 200);        
-        
+
+componentWillUnmount(){
+    this.setState({ data:"", isLoaded:false  });
+}
+    componentDidMount(){
+        this.hide2()
+            setTimeout(() => {
+                fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
+                        .then((result) => result.json())
+                        .then((result) => result)
+                        .then((result) => this.setState({ data: result, isLoaded: true }))
+                        .catch(error => {
+                            console.error("error: ", error);
+                        });
+            }, 200);        
+               
     }
+ 
+  
 
     render() {
         return (
@@ -44,18 +53,17 @@ setTimeout(() => {
                             id="searchinput"
                             type="text"
                             placeholder="Type something to search"
-                            onChange={e => this.setState({ recipeList: " " + e.target.value })}
-                            onInput={() => { this.handleSearch(); }}
-                            onMouseOver={e => this.setState({ recipeList: " " + e.target.value }) }
+                            onChange={e => this.setState({ recipeList: e.target.value })}
+                            onInput={() => { this.componentDidMount(); this.show() }}
                         />
-                        {console.log(this.state.data)}
+    
 
 
-                        <Link to="/">
+                        <Link to="/random">
                             <button type="button"
                                 id="searchbutton"
                                 className="input-radius"
-                                onClick={() => { this.handleSearch(); this.hide() }}
+                                onClick={() => { this.componentDidMount(); this.hide2() }}
                             >Search</button>
                         </Link>
                     </Col>
