@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
   hideMe(){
     setTimeout(() => {
     document.getElementById("error").style.display="none";
-    }, 10000);
+    }, 7000);
 }
 
 
@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component {
      
       return <div>
         <Search/>
-      <div id="error" className="error" onLoad={this.hideMe()}>
+      <div id="error" className="error border-radius" onLoad={this.hideMe()}>
         <h3> Sorry! No tasty result, but you can try this:
         </h3>
           <div>
