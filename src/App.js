@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 import './App.css';
@@ -46,6 +47,7 @@ function App() {
           <Route path="/meals/:Id" component={SingleCategory} />
 
           <Route path="/recipe/:Id" component={Recipe} />
+
         </Switch>
 
         <Footer />
