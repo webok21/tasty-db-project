@@ -1,16 +1,15 @@
 import './../css/Footer.css'
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div className="footer">
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
                 <img src="/img/insta.png" alt="" />
             </a>
             <a href="https://youtu.be/gB2QgvtIVwY?t=55" target="_blank">
                 <img src="/img/youtube.png" alt="" />
             </a>
-            <a href="https://www.facebook.com" target="_blank">
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
                 <img src="/img/fb.png" alt="" />
             </a>
         </div>
