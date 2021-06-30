@@ -1,5 +1,19 @@
 .error {
-  color: black;
+  color: var(--white);
   background-color: var(--orange);
   border-radius: 25px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+#errorbutton {
+  background: var(--pink);
+  font-weight: var(--fw900);
+  width: 40%;
+  height: 60px;
+  margin: 20px;
+  border: none;
+  padding: 0 2%;
 }

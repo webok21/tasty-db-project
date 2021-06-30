@@ -47,6 +47,9 @@ figure img {
   list-style: none;
   padding: 0;
 }
+.recipe-ingredients li {
+  margin-bottom: 2%;
+}
 .recipe button {
   background: var(--white);
   color: var(--pink);

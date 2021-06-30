@@ -3,28 +3,35 @@ import React, { Component } from 'react';
 import SearchItem from './SearchItem';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-import axios from 'axios';
 
 class Search extends Component {
+
+
+    
 
 
     hide() {
         setTimeout(() => {
             document.getElementById("Categories").style.display = "none"
-        }, 1000);
+        }, 800);
     }
 
 
-    state = { recipeList: "", data: [], isLoaded: false, mergedData:[] }
+
+
+
+    state = { recipeList: "", data: [], isLoaded: false, mergedData: [] }
     handleSearch() {
-        console.log(this.state.data)
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
+setTimeout(() => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.recipeList}`)
             .then((result) => result.json())
             .then((result) => result)
             .then((result) => this.setState({ data: result, isLoaded: true }))
             .catch(error => {
                 console.error("error: ", error);
             });
+}, 200);        
+        
     }
 
     render() {
@@ -37,9 +44,10 @@ class Search extends Component {
                             id="searchinput"
                             type="text"
                             placeholder="Type something to search"
-                            onChange={e => this.setState({ recipeList: " " + e.target.value })} 
-                            onInput={() => { this.handleSearch(); this.hide() }}
-                            />
+                            onChange={e => this.setState({ recipeList: " " + e.target.value })}
+                            onInput={() => { this.handleSearch(); }}
+                            onMouseOver={e => this.setState({ recipeList: " " + e.target.value }) }
+                        />
                         {console.log(this.state.data)}
 
 

@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
   hideMe(){
     setTimeout(() => {
     document.getElementById("error").style.display="none";
-    }, 7000);
+    }, 10000);
 }
 
 
@@ -28,10 +28,15 @@ class ErrorBoundary extends React.Component {
       return <div>
         <Search/>
       <div id="error" className="error" onLoad={this.hideMe()}>
-        <h1> Sorry! We didnt´t found that, but you can try this 
-          <Link to="/random">Recipe
-          </Link>. 
-          </h1></div></div>
+        <h3> Sorry! We didnt´t found that, but you can try this:
+        </h3>
+          <div>
+          <Link to="/random">
+          <button id="errorbutton">Recipe please</button>
+          </Link>
+          </div>
+          </div>
+          </div>
     }
     return this.props.children;
   }
